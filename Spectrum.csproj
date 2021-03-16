@@ -1,0 +1,163 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <Platforms>x86</Platforms>
+    <Configurations>Debug;Release;Steam-Debug;Steam-Release</Configurations>
+    <RestoreSources>
+      http://vector57.net:5000/v3/index.json
+    </RestoreSources>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <OutputPath>bin\Debug</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <DefineConstants></DefineConstants>
+    <OutputPath>bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Steam-Debug|x86'">
+    <DefineConstants>DEBUG;TRACE;STEAM;STEAMWORKS_WIN</DefineConstants>
+    <OutputPath>bin\SteamDebug</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Steam-Release|x86'">
+    <DefineConstants>STEAM;STEAMWORKS_WIN</DefineConstants>
+    <OutputPath>bin\SteamRelease</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Dependencies\**" />
+    <Compile Remove="Replicate\**" />
+    <Compile Remove="Test\**" />
+    <EmbeddedResource Remove="Dependencies\**" />
+    <EmbeddedResource Remove="Replicate\**" />
+    <EmbeddedResource Remove="Test\**" />
+    <None Remove="Dependencies\**" />
+    <None Remove="Replicate\**" />
+    <None Remove="Test\**" />
+    <None Remove="**/.git" />
+    <None Remove="**/.gitignore" />
+    <None Remove="Spectrum.v11.suo" />
+    <None Remove="SpectrumTest.v12.suo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>Dependencies\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Nat">
+      <HintPath>Dependencies\Mono.Nat.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>Dependencies\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Content.Pipeline">
+      <HintPath>Dependencies\MonoGame.Framework.Content.Pipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>Dependencies\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Pngcs">
+      <HintPath>Dependencies\Pngcs.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>Dependencies\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>Dependencies\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.D3DCompiler">
+      <HintPath>Dependencies\SharpDX.D3DCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1">
+      <HintPath>Dependencies\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D10">
+      <HintPath>Dependencies\SharpDX.Direct3D10.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11">
+      <HintPath>Dependencies\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11.Effects">
+      <HintPath>Dependencies\SharpDX.Direct3D11.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>Dependencies\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput">
+      <HintPath>Dependencies\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectSound">
+      <HintPath>Dependencies\SharpDX.DirectSound.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI">
+      <HintPath>Dependencies\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation">
+      <HintPath>Dependencies\SharpDX.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.RawInput">
+      <HintPath>Dependencies\SharpDX.RawInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XACT3">
+      <HintPath>Dependencies\SharpDX.XACT3.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XAudio2">
+      <HintPath>Dependencies\SharpDX.XAudio2.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XInput">
+      <HintPath>Dependencies\SharpDX.XInput.dll</HintPath>
+    </Reference>
+    <Reference Include="Steamworks.NET">
+      <HintPath>Dependencies\Steamworks\Steamworks.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg">
+      <HintPath>Dependencies\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="Content\**" Exclude="Content\**\*.fx;Content\**\*.fxh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dependencies\Steamworks\CSteamworks.dll">
+      <Link>CSteamworks.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dependencies\Steamworks\steam_api.dll">
+      <Link>steam_api.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <MGFXCompile Include="Content\HLSL\*.fx" />
+    <Content Include="Content\Textures\blank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="openvr_api.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="IronPython" Version="2.7.9" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Replicate" Version="0.1.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <CustomBuildAfterTargets>ClCompile</CustomBuildAfterTargets>
+    <CustomBuildBeforeTargets>Link</CustomBuildBeforeTargets>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CustomBuildAfterTargets>Compile</CustomBuildAfterTargets>
+    <CustomBuildBeforeTargets>Link</CustomBuildBeforeTargets>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <Import Project="mgfx.targets.xml" />
+</Project>

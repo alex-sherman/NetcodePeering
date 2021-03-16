@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetcodePeering", "NetcodePeering.csproj", "{EE52B073-30A9-4AFC-8713-4C9326865140}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spectrum", "Spectrum\Spectrum.csproj", "{70365172-CD8A-4C43-9A68-3742127FC7C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		Steam-Debug|Any CPU = Steam-Debug|Any CPU
+		Steam-Debug|x86 = Steam-Debug|x86
+		Steam-Release|Any CPU = Steam-Release|Any CPU
+		Steam-Release|x86 = Steam-Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Debug|x86.Build.0 = Debug|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Release|x86.Build.0 = Release|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Steam-Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Steam-Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Steam-Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Steam-Debug|x86.Build.0 = Debug|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Steam-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Steam-Release|Any CPU.Build.0 = Release|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Steam-Release|x86.ActiveCfg = Release|Any CPU
+		{EE52B073-30A9-4AFC-8713-4C9326865140}.Steam-Release|x86.Build.0 = Release|Any CPU
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Debug|x86.ActiveCfg = Debug|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Debug|x86.Build.0 = Debug|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Release|Any CPU.ActiveCfg = Release|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Release|x86.ActiveCfg = Release|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Release|x86.Build.0 = Release|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Steam-Debug|Any CPU.ActiveCfg = Steam-Debug|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Steam-Debug|x86.ActiveCfg = Steam-Debug|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Steam-Debug|x86.Build.0 = Steam-Debug|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Steam-Release|Any CPU.ActiveCfg = Steam-Release|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Steam-Release|x86.ActiveCfg = Steam-Release|x86
+		{70365172-CD8A-4C43-9A68-3742127FC7C7}.Steam-Release|x86.Build.0 = Steam-Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3C33266-1E42-4EDE-A603-11A6D68900F7}
+	EndGlobalSection
+EndGlobal
